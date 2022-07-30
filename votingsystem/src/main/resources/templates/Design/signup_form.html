@@ -1,0 +1,126 @@
+<!--<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Citizen Registration</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    
+    <style>
+        body{
+    background-image: url(bg12.png);
+    }
+     h1{
+        text-align: center;
+     }
+
+     
+
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div>
+            <h1>User Registration -Citizens</h1>
+        </div>
+        <form th:action="@{/process_register}" method="post" style="max-width: 600px; margin: 0 auto;" th:object="${citizen}"
+            >
+        <div class="m-3">
+            <div class="form-group row">
+                <label class="col-form-label col-4 ">Voter Id: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{id}" class="form-control" required />
+                </div>
+            </div>
+             
+            <div class="form-group row">
+                <label class="col-form-label col-4 ">Password: </label>
+                <div class="col-8">
+                    <input type="password" th:field="*{password}" class="form-control"
+                            required  maxlength="10"/>
+                </div>
+            </div>
+             
+            <div class="form-group row">
+                <label class="col-form-label col-4 "> Name: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{name}" class="form-control"
+                            required maxlength="20"/>
+                </div>
+            </div>
+            
+             
+            <div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Citizen Registration</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    
+    <style>
+        body{
+    background-image: url(bg12.png);
+    }
+    h1{
+    text-align:center;
+    font-family:marsek;
+    
+    font-size: 35px;
+    text-decoration-style: bold;
+    /*border:0.9px solid black;*/
+    box-sizing: border-box;
+    outline-width: 25px;
+    
+
+}
+    
+    </style>
+</head>
+<body>
+    <h1>ONLINE VOTING SYSTEM</h1><hr><br><br>
+    <div class="container text-center">
+        <div>
+            <h1>User Registration -Citizens</h1>
+        </div>
+        <form th:action="@{/process_register}" method="post" style="max-width: 600px; margin: 0 auto;" th:object="${citizen}"
+            >
+        <div>
+            <div class="form-group row">
+                <label>Voter Id: </label>
+                <div>
+                    <input type="text" th:field="*{id}" class="form-control" required />
+                </div>
+            </div>
+             
+            <div class="form-group row">
+                <label">Password: </label>
+                <div>
+                    <input type="password" th:field="*{password}" class="form-control"
+                            required  maxlength="10"/>
+                </div>
+            </div>
+             
+            <div>
+                <label> Name: </label>
+                <div>
+                    <input type="text" th:field="*{name}" class="form-control"
+                            required maxlength="20"/>
+                </div>
+            </div>
+            
+             
+            <div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link rel="stylesheet" type="text/css" href="style_votePage.css">
+
+</head>
+<body>
+	<h1>ONLINE VOTING SYSTEM</h1><hr>
+	<h3>Welcome to the home page</h3><br><br><br><br>	
+
+<div class="flexing">
+<div class="user">USER PORTAL<br><br><br>
+<form action="#" th:action="@{/doLogin}" method="post">
+<!-- <input type="text" name="name" />--> 
+<input type="submit" value="Proceed for Voting"  /><br><br>
+
+</form></div>
+
+<div class="admin">ADMIN PORTAL
+
+<form action='#' th:action="@{/electionresults}" method="post">
+<input type="submit" value="Election Results"/>
+</form>
+
+<form action='#' th:action="@{/userregistration}" method="post">
+<input type="submit" value="User Registration- Admin access"/>
+</form>
+
+<form action='#' th:action="@{/candidateregistration}" method="post">
+<input type="submit" value="Candidate Registration- Admin access"/>
+</form>
+</div>
+<div class="logout">Logout from Portal<br><br><br>
+
+
+<form action='#' th:action="@{/logout}" method="post">
+<input type="submit" value="LOGOUT"/>
+</form></div>
+</div>
+
+</body>
+</html>

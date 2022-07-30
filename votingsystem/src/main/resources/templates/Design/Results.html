@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+The number of votes cast for each candidate is
+<div th:each="candidate : ${candidates}">
+ <a th:text="${candidate.name}" > </a> <a th:text="${candidate.numberofvotes}"></a>
+</div>
+
+  <form action='#' th:action="@{/}" method="post">
+<input type="submit" value=" Go back to home"/>
+</form>
+     
+</body>
+</html>
